@@ -21,6 +21,7 @@ class Clicky extends Component {
 	}
   create({ x, node }) {
     const cmp = this;
+    const { id } = cmp;
     x.ch(node, "script[async=async,src=https://static.getclicky.com/js]", node => {
       x.attr(node, "data-id", id);
     });

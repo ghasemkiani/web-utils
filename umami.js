@@ -21,6 +21,7 @@ class Umami extends Component {
 	}
   create({ x, node }) {
     const cmp = this;
+    const { id } = cmp;
     x.ch(node, "script[defer=defer,src=https://cloud.umami.is/script.js]", node => {
       x.attr(node, "data-website-id", id);
     });
